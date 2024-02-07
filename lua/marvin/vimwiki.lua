@@ -1,0 +1,1 @@
+require('vimwiki/vimwiki').setup({})
