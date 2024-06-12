@@ -40,4 +40,23 @@ return require('packer').startup(function(use)
   }
   use({'vimwiki/vimwiki'})
   use({'alvan/vim-closetag'})
+  use {
+      "windwp/nvim-autopairs",
+      config = function() require("nvim-autopairs").setup {} end
+  }
+  use { 'codota/tabnine-nvim', run = "./dl_binaries.sh" }
+  use({
+      "neanias/everforest-nvim",
+      -- Optional; default configuration will be used if setup isn't called.
+      config = function()
+          require("everforest").setup()
+      end,
+  })
+  use({
+      "folke/tokyonight.nvim",
+      lazy = false,
+      priority = 1000,
+      opts = {},
+  })
+  use({"elentok/format-on-save.nvim"})
 end)

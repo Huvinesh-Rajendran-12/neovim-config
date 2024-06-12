@@ -2,6 +2,8 @@ vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>Z", vim.cmd.Ex)
 vim.opt.guicursor = ""
 
+vim.g.maplocalleader = ","
+
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
